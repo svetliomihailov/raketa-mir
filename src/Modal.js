@@ -4,7 +4,7 @@ import reset from './reset'
 import buttonReset from './buttonReset'
 
 const Overlay = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -15,7 +15,7 @@ const Overlay = styled.div`
 `
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
