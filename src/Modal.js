@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import reset from './reset';
-import buttonReset from './buttonReset';
+import React from 'react'
+import styled from 'styled-components'
+import reset from './reset'
+import buttonReset from './buttonReset'
 
 const Overlay = styled.div`
   position: absolute;
@@ -10,9 +10,9 @@ const Overlay = styled.div`
   bottom: 0;
   left: 0;
   z-index: 1;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
-`;
+`
 
 const Wrapper = styled.div`
   position: absolute;
@@ -25,29 +25,29 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   pointer-events: none;
-`;
+`
 
 const Inner = styled.div`
   width: 80%;
   border-radius: 3px;
-  background-color: ${props => props.theme.colors.white};
-  box-shadow: 0 8px 10px rgba(0,0,0,0.2);
+  background-color: ${(props) => props.theme.colors.white};
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
   pointer-events: all;
-`;
+`
 
 const TitleBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 0.5em 0.5em 1em;
-  border-bottom: 1px solid ${props => props.theme.colors.gray};
-`;
+  border-bottom: 1px solid ${(props) => props.theme.colors.gray};
+`
 
 const Title = styled.div`
   ${reset};
   font-size: 1.25em;
   font-weight: 700;
-`;
+`
 
 const CloseButton = styled.button`
   ${buttonReset};
@@ -60,16 +60,16 @@ const CloseButton = styled.button`
   font-size: 1em;
   overflow: hidden;
   text-indent: -9999px;
-`;
+`
 
 const Content = styled.div`
   ${reset};
   padding: 1em;
-`;
+`
 
 export default ({ title, children, onClose }) => {
   const handleKeyUp = ({ key }) => {
-    if (key === 'Escape') onClose();
+    if (key === 'Escape') onClose()
   }
 
   React.useEffect(() => {
@@ -78,24 +78,24 @@ export default ({ title, children, onClose }) => {
     return () => {
       document.removeEventListener('keyup', handleKeyUp)
     }
-  });
+  })
 
   return (
-    <>
+    <React.Fragment>
       <Overlay onClick={onClose} />
 
       <Wrapper>
         <Inner>
           <TitleBar>
             <Title>{title}</Title>
-            <CloseButton type="button" onClick={onClose}>&times;</CloseButton>
+            <CloseButton type='button' onClick={onClose}>
+              &times;
+            </CloseButton>
           </TitleBar>
 
-          <Content>
-            {children}
-          </Content>
+          <Content>{children}</Content>
         </Inner>
       </Wrapper>
-    </>
-  );
+    </React.Fragment>
+  )
 }
