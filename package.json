@@ -1,6 +1,6 @@
 {
   "name": "@raketa-cms/raketa-mir",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Raketa Design System",
   "author": "studioraketa",
   "license": "MIT",
@@ -46,7 +46,8 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "styled-components": "^5.1.0"
   },
   "files": [
     "dist"
