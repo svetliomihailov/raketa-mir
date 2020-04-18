@@ -1,6 +1,6 @@
 {
   "name": "@raketa-cms/raketa-mir",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Raketa Design System",
   "author": "studioraketa",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
@@ -49,8 +50,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "styled-components": "^5.1.0"
-  }
+  ]
 }
