@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import reset from './reset';
+import styled from 'styled-components'
+import reset from './reset'
 
 const Panel = styled.div`
   ${reset};
@@ -11,7 +11,7 @@ const Panel = styled.div`
   &.sortable-selected {
     background-color: #0a0a;
   }
-`;
+`
 
 const PanelTitle = styled.div`
   ${reset};
@@ -20,16 +20,12 @@ const PanelTitle = styled.div`
   align-items: center;
   padding: 0.25em 0.25em 0.25em;
   border-bottom: 1px solid #ddd;
-  background-color: ${props => props.theme.colors.lighterGray};
+  background-color: ${(props) => props.theme.colors.lighterGray};
   font-weight: 700;
-`;
+`
 
 const PanelContent = styled.div`
   padding: 1em;
-`;
+`
 
-export {
-  Panel,
-  PanelTitle,
-  PanelContent,
-};
+export { Panel, PanelTitle, PanelContent }

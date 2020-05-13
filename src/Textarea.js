@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import reset from './reset';
+import styled from 'styled-components'
+import reset from './reset'
 
 export default styled.textarea`
   ${reset};
@@ -10,8 +10,10 @@ export default styled.textarea`
   width: 100%;
   height: 300px;
   padding: 0.75em;
-  border-bottom: 2px solid ${props => props.theme.colors.gray};
-  background-color: ${props => props.theme.colors.lighterGray};
+  border-bottom: 2px solid ${(props) => props.theme.colors.gray};
+  background-color: ${(props) => props.theme.colors.lighterGray};
 
-  &:focus { border-color: ${props => props.theme.colors.primary}; }
-`;
+  &:focus {
+    border-color: ${(props) => props.theme.colors.primary};
+  }
+`

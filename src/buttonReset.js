@@ -1,5 +1,5 @@
-import { css } from 'styled-components';
-import reset from './reset';
+import { css } from 'styled-components'
+import reset from './reset'
 
 const buttonReset = css`
   ${reset};
@@ -7,6 +7,6 @@ const buttonReset = css`
   border: 0;
   outline: 0;
   cursor: pointer;
-`;
+`
 
-export default buttonReset;
+export default buttonReset

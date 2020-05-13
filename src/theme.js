@@ -1,13 +1,13 @@
-const base = 14;
-const fraction = 1.25;
+const base = 14
+const fraction = 1.25
 
-const small = base / fraction;
-const tiny = small / fraction;
-const medium = base * fraction;
-const large = medium * fraction;
-const xlarge = large * fraction;
-const xxlarge = xlarge * fraction;
-const huge = xxlarge * fraction;
+const small = base / fraction
+const tiny = small / fraction
+const medium = base * fraction
+const large = medium * fraction
+const xlarge = large * fraction
+const xxlarge = xlarge * fraction
+const huge = xxlarge * fraction
 
 export default {
   font: {
@@ -36,4 +36,4 @@ export default {
     danger: 'rgb(221, 0, 0)',
     dangerLight: 'rgb(255, 211, 211)',
   },
-};
+}

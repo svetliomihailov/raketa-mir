@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import reset from './reset';
+import styled from 'styled-components'
+import reset from './reset'
 
 export default styled.input`
   ${reset};
@@ -9,8 +9,10 @@ export default styled.input`
   border: 0;
   width: 100%;
   padding: 0.75em;
-  border-bottom: 2px solid ${props => props.theme.colors.gray};
-  background-color: ${props => props.theme.colors.lighterGray};
+  border-bottom: 2px solid ${(props) => props.theme.colors.gray};
+  background-color: ${(props) => props.theme.colors.lighterGray};
 
-  &:focus { border-color: ${props => props.theme.colors.primary}; }
-`;
+  &:focus {
+    border-color: ${(props) => props.theme.colors.primary};
+  }
+`
