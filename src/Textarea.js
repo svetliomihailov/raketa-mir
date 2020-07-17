@@ -8,7 +8,7 @@ export default styled.textarea`
   border-radius: 0;
   border: 0;
   width: 100%;
-  height: 300px;
+  height: 100px;
   padding: 0.75em;
   border-bottom: 2px solid ${(props) => props.theme.colors.gray};
   background-color: ${(props) => props.theme.colors.lighterGray};

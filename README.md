@@ -7,22 +7,26 @@
 ## Install
 
 ```bash
-npm install --save @raketa-cms/raketa-mir
+yarn add @raketa-cms/raketa-mir
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import MyComponent from '@raketa-cms/raketa-mir'
-import '@raketa-cms/raketa-mir/dist/index.css'
+import { Textarea, theme } from '@raketa-cms/raketa-mir'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Textarea />
+    </ThemeProvider>
+  )
 }
+
+export default App
 ```
 
 ## License

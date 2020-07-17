@@ -1,10 +1,18 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import { ExampleComponent } from '@raketa-cms/raketa-mir'
-import '@raketa-cms/raketa-mir/dist/index.css'
+import { Textarea, theme } from '@raketa-cms/raketa-mir'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <ThemeProvider theme={theme}>
+      <div style={{ width: '1200px', margin: '0 auto' }}>
+        <h1>Examples</h1>
+
+        <Textarea />
+      </div>
+    </ThemeProvider>
+  )
 }
 
 export default App
