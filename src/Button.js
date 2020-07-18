@@ -7,21 +7,45 @@ const variants = {
     border: 'primary',
     background: 'primary',
     color: 'white',
+    hoverBorder: 'primaryDark',
+    hoverBackground: 'primaryDark',
+    hoverColor: 'white',
+    activeBorder: 'primaryDarker',
+    activeBackground: 'primaryDarker',
+    activeColor: 'white',
   },
   secondary: {
-    border: 'gray',
+    border: 'darkerGray',
     background: 'white',
-    color: 'black',
+    color: 'darkerGray',
+    hoverBorder: 'darkGray',
+    hoverBackground: 'darkGray',
+    hoverColor: 'white',
+    activeBorder: 'darkerGray',
+    activeBackground: 'darkerGray',
+    activeColor: 'white',
   },
   success: {
     border: 'success',
     background: 'success',
     color: 'white',
+    hoverBorder: 'successDark',
+    hoverBackground: 'successDark',
+    hoverColor: 'white',
+    activeBorder: 'successDarker',
+    activeBackground: 'successDarker',
+    activeColor: 'white',
   },
   danger: {
     border: 'danger',
     background: 'danger',
     color: 'white',
+    hoverBorder: 'dangerDark',
+    hoverBackground: 'dangerDark',
+    hoverColor: 'white',
+    activeBorder: 'dangerDarker',
+    activeBackground: 'dangerDarker',
+    activeColor: 'white',
   },
 }
 
@@ -36,28 +60,38 @@ const getColor = (props, variant, key) =>
 
 const Button = styled.button`
   ${buttonReset};
-  padding: 0.75em 1.25em;
+  padding: 0.5em 1em;
   margin-right: 0.25em;
-  border: 1px solid ${(props) => getColor(props, props.variant, 'border')};
-  border-radius: 3px;
+  border: 2px solid ${(props) => getColor(props, props.variant, 'border')};
+  border-radius: 48px;
   background-color: ${(props) => getColor(props, props.variant, 'background')};
-  color:  ${(props) => getColor(props, props.variant, 'color')};
+  color: ${(props) => getColor(props, props.variant, 'color')};
   font-size: ${(props) => sizes[props.size || 'md']};
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   transition: 0.1s ease-in-out all;
 
-  &:hover {
-    /* transform: scale(1.01); */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  &:focus {
+    border-color: ${(props) => getColor(props, props.variant, 'activeBorder')};
   }
 
-  &:active { transform: scale(0.95); }
+  &:hover {
+    border-color: ${(props) => getColor(props, props.variant, 'hoverBorder')};
+    background-color: ${(props) =>
+      getColor(props, props.variant, 'hoverBackground')};
+    color: ${(props) => getColor(props, props.variant, 'hoverColor')};
+  }
 
-  /* &:focus { box-shadow: 0 0 20px ${(props) =>
-    props.theme.colors.primary}; } */
+  &:active {
+    border-color: ${(props) => getColor(props, props.variant, 'activeBorder')};
+    background-color: ${(props) =>
+      getColor(props, props.variant, 'activeBackground')};
+    color: ${(props) => getColor(props, props.variant, 'activeColor')};
+  }
 
-  &:last-of-type { margin-right: 0; }
+  &:last-of-type {
+    margin-right: 0;
+  }
 `
 
 Button.defaultProps = {

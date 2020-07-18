@@ -4,6 +4,7 @@ import reset from './reset'
 import buttonReset from './buttonReset'
 
 const Overlay = styled.div`
+  ${reset};
   position: fixed;
   top: 0;
   right: 0;
@@ -15,6 +16,7 @@ const Overlay = styled.div`
 `
 
 const Wrapper = styled.div`
+  ${reset};
   position: fixed;
   top: 0;
   right: 0;
@@ -28,31 +30,37 @@ const Wrapper = styled.div`
 `
 
 const Inner = styled.div`
+  ${reset};
   width: 80%;
-  border-radius: 3px;
-  background-color: ${(props) => props.theme.colors.white};
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: ${(props) => props.theme.colors.lighterGray};
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   pointer-events: all;
 `
 
 const TitleBar = styled.div`
+  ${reset};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 0.5em 0.5em 1em;
-  border-bottom: 1px solid ${(props) => props.theme.colors.gray};
+  padding: 1.25em 2em;
+  border-bottom: 2px solid ${(props) => props.theme.colors.lightGray};
 `
 
 const Title = styled.div`
   ${reset};
   font-size: 1.25em;
-  font-weight: 700;
+  font-weight: 500;
 `
 
 const CloseButton = styled.button`
   ${buttonReset};
+  position: relative;
+  right: -12px;
   width: 2em;
   height: 2em;
+  margin: 0;
+  padding: 0;
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center;
@@ -64,7 +72,7 @@ const CloseButton = styled.button`
 
 const Content = styled.div`
   ${reset};
-  padding: 1em;
+  padding: 1em 2em 2em 2em;
 `
 
 export default ({ title, children, onClose }) => {
