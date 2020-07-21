@@ -10,7 +10,7 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 11;
   background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
 `
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 12;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +57,7 @@ const CloseButton = styled.button`
   ${buttonReset};
   position: relative;
   right: -12px;
+  z-index: 13;
   width: 2em;
   height: 2em;
   margin: 0;
