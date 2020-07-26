@@ -43,7 +43,7 @@ const TitleBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25em 2em;
+  padding: 1em;
   border-bottom: 2px solid ${(props) => props.theme.colors.lightGray};
 `
 
@@ -56,7 +56,7 @@ const Title = styled.div`
 const CloseButton = styled.button`
   ${buttonReset};
   position: relative;
-  right: -12px;
+  right: -4px;
   z-index: 13;
   width: 2em;
   height: 2em;
@@ -73,7 +73,7 @@ const CloseButton = styled.button`
 
 const Content = styled.div`
   ${reset};
-  padding: 1em 2em 2em 2em;
+  padding: 0.5em 1em 1em 1em;
 `
 
 export default ({ title, children, onClose }) => {
