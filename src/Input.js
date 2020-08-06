@@ -2,28 +2,21 @@ import styled from 'styled-components'
 import reset from './reset'
 
 export default styled.input`
-  &[type='text'],
-  &[type='email'],
-  &[type='number'],
-  &[type='tel'],
-  &[type='password'],
-  &[type='search'] {
-    ${reset};
-    border: 0;
-    outline: 0;
-    border-radius: 4px;
-    border: 0;
-    width: 100%;
-    padding: 0.5em 0.75em;
-    border: 1px solid ${(props) => props.theme.colors.gray};
-    background-color: ${(props) => props.theme.colors.trueWhite};
+  ${reset};
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 4px !important;
+  border: 0 !important;
+  width: 100% !important;
+  padding: 0.5em 0.75em !important;
+  border: 1px solid ${(props) => props.theme.colors.gray} !important;
+  background-color: ${(props) => props.theme.colors.trueWhite} !important;
 
-    &:hover {
-      border-color: ${(props) => props.theme.colors.darkGray};
-    }
+  &:hover {
+    border-color: ${(props) => props.theme.colors.darkGray} !important;
+  }
 
-    &:focus {
-      border-color: ${(props) => props.theme.colors.primary};
-    }
+  &:focus {
+    border-color: ${(props) => props.theme.colors.primary} !important;
   }
 `
