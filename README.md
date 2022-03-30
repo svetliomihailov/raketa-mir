@@ -12,22 +12,7 @@ yarn add @raketa-cms/raketa-mir
 
 ## Usage
 
-```jsx
-import React from 'react'
-import { ThemeProvider } from 'styled-components'
-
-import { Textarea, theme } from '@raketa-cms/raketa-mir'
-
-const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Textarea />
-    </ThemeProvider>
-  )
-}
-
-export default App
-```
+Check the [example app](/example/src/App.js) on how to use the different components.
 
 ## License
 

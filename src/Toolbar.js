@@ -3,5 +3,9 @@ import reset from './reset'
 
 export default styled.div`
   ${reset};
-  margin-bottom: 1em;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: ${(props) => props.mb || 0};
 `
