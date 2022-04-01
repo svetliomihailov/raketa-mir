@@ -17,11 +17,24 @@ const Wrapper = styled.div`
     }
 
     tr {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
+      transition: all 0.3s ease-in-out;
     }
 
     a {
       color: ${(props) => props.theme.colors.primary};
+    }
+
+    tbody {
+      tr {
+        &:hover {
+          border-color: ${(props) => props.theme.colors.gray};
+
+          td {
+            background-color: ${(props) => props.theme.colors.lighterGray};
+          }
+        }
+      }
     }
 
     .actions {

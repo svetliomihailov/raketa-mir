@@ -8,12 +8,29 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
+  gap: 0.25em;
   padding: 1em 0 1em 0;
 
   a,
   span {
-    margin: 0 0.25em 0 0.25em;
+    display: block;
+    min-width: 1.25em;
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  a {
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.lightGray};
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-color: ${(props) => props.theme.colors.primary};
+      background-color: ${(props) => props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.white};
+    }
   }
 `
 

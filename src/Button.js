@@ -69,7 +69,7 @@ const Button = styled.button`
   font-size: ${(props) => sizes[props.size || 'md']};
   font-weight: 700;
   line-height: 1;
-  transition: 0.1s ease-in-out all;
+  transition: 0.2s ease-in-out all;
 
   &:focus {
     border-color: ${(props) => getColor(props, props.variant, 'activeBorder')};
