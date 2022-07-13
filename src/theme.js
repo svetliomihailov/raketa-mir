@@ -34,6 +34,7 @@ export default {
     primaryDarker: '#095aba',
     primaryDark: '#0d66d0',
     primary: '#1473e6',
+    primaryRGB06: 'rgba(20, 115, 230, 0.6)',
     primaryLight: '#2680eb',
     successDarker: '#107154',
     successDark: '#12805c',
